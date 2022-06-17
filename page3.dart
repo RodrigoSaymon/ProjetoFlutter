@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:rodrigo1/page1.dart';
-import 'package:rodrigo1/page3.dart';
+import 'package:rodrigo1/page2.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+import 'home.dart';
+
+class Page3 extends StatelessWidget {
+  const Page3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +23,13 @@ class Home extends StatelessWidget {
                   iconSize: 70,
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      settings: RouteSettings(name: 'Page3'),
-                      builder: (context) => Page3(),
+                      settings: RouteSettings(name: 'Page2'),
+                      builder: (context) => Page2(),
                     ));
                   },
                   icon: Icon(Icons.arrow_back)),
               Text(
-                'INÍCIO',
+                'PAGINA 3',
                 style: TextStyle(
                   fontSize: 50,
                   fontWeight: FontWeight.bold,
@@ -40,8 +41,8 @@ class Home extends StatelessWidget {
                   iconSize: 70,
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      settings: RouteSettings(name: 'Page1'),
-                      builder: (context) => Page1(),
+                      settings: RouteSettings(name: '/'),
+                      builder: (context) => Home(),
                     ));
                   },
                   icon: Icon(Icons.arrow_forward)),
